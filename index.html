@@ -1,1 +1,45 @@
-<p>hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun HTML Page</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+      transition: background-color 0.5s ease;
+    }
+    h1 {
+      color: darkblue;
+      text-shadow: 2px 2px 5px yellow;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background-color: orange;
+      color: white;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Welcome to Fun HTML! 🎉</h1>
+  <p>Click the button below to change the background color:</p>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      const colors = ["lightblue", "lightgreen", "black", "lavender", "peachpuff", "gold", "plum"];
+      document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</body>
+</html>
